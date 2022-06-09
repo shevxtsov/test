@@ -1,0 +1,113 @@
+@import '../../style/variables.scss';
+@import '../../style/rem.scss';
+@import '../../style/media.scss';
+
+fieldset {
+    border: none;
+    outline: none;
+    position: relative;
+}
+
+@mixin placeholder{
+    font-family: $font1;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: #000;
+    @include rem(font-size, 16px);
+    @include rem(line-height, 30px);
+
+    @include media("max", "sm") {
+        font-size: 16px;
+        line-height: 30px;
+    }
+}
+
+input {
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: #fff;
+    font-family: $font1;
+    font-weight: 400;
+    @include rem(font-size, 16px);
+    @include rem(line-height, 30px);
+    @include rem(padding-top, 15px);
+    @include rem(padding-left, 10px);
+    @include rem(padding-right, 50px);
+    @include rem(padding-bottom, 15px);
+    @include rem(border-radius, 5px);
+
+    &::placeholder {
+        @include placeholder();
+    }
+
+    &::-moz-placeholder{
+		@include placeholder();
+	}
+
+	&::-webkit-input-placeholder{
+		@include placeholder();
+	}
+
+	&::-ms-input-placeholder{
+		@include placeholder();
+	}
+
+    @include media("max", "sm") {
+        font-size: 16px;
+        line-height: 30px;
+        padding: 15px 10px 15px;
+        border-radius: 5px;
+        padding-right: 50px;
+    }
+}
+
+.form-control {
+    margin: 0 auto;
+    @include rem(width, 600px);
+    @include rem(margin-bottom, 32px);
+
+    @include media("max", "sm") {
+        width: 310px;
+        margin-bottom: 24px;
+    }
+}
+
+.search-close {
+    background: transparent;
+    border: none;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    position: absolute;
+    transition: all .3s;
+    @include rem(width, 60px);
+    @include rem(height, 60px);
+    @include rem(top, 5px);
+    @include rem(right, 0);
+
+    img {
+        display: block;
+        @include rem(width, 26px);
+        @include rem(height, 26px);
+
+        @include media("max", "sm") {
+            width: 26px;
+            height: 26px;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    @include media("max", "sm") {
+        width: 60px;
+        height: 60px;
+        top: 3px;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

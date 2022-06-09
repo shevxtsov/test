@@ -1,0 +1,40 @@
+@import '../../style/variables.scss';
+@import '../../style/rem.scss';
+@import '../../style/media.scss';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    @include rem(padding-top, 20px);
+    @include rem(padding-left, 20px);
+    @include rem(padding-right, 20px);
+    @include rem(padding-bottom, 20px);
+
+    @include media("max", "sm") {
+        padding: 15px 20px;
+    }
+}
+
+.logo {
+    font-weight: 700;
+    text-transform: uppercase;
+    @include rem(font-size, 24px);
+    @include rem(line-height, 24px);
+
+    span {
+        color: $main-color;
+        @include rem(font-size, 24px);
+        @include rem(line-height, 24px);
+
+        @include media("max", "sm") {
+            font-size: 20px;
+            line-height: 20px;
+        }
+    }
+
+    @include media("max", "sm") {
+        font-size: 20px;
+        line-height: 20px;
+    }
+}

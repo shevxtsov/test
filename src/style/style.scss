@@ -1,0 +1,153 @@
+@import './variables';
+@import './rem';
+@import './button';
+@import './media';
+
+*, ::after, ::before {
+    box-sizing: border-box;
+	font-size: .84vw;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1vw;
+    font-family: $font1;
+    color: $dark;
+	font-weight: 400;
+    background-color: #EEEEEE;
+}
+
+ul,
+li,
+dl {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+	font-size: 1vw;
+}
+
+h1,
+h2 {
+    color: $main-color;
+}
+
+a {
+    font-size: 1vw;
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 1vw;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+.wrapper {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+    @include rem(padding-top, 35px);
+    @include rem(padding-bottom, 50px);
+
+    @include media("max", "sm") {
+        padding: 20px 0 50px;
+    }
+}
+
+.container {
+	margin: 0 auto;
+	@include rem(width, 1189px);
+	@include rem(padding-left, 15px);
+	@include rem(padding-right, 15px);
+
+	@include media("max", "sm"){
+		width: 100%;
+		padding: 0 15px;
+	}
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &--center {
+        justify-content: center;
+    }
+
+    &--around {
+        justify-content: left;
+        @include rem(gap, 20px);
+    }
+}
+
+.section-title {
+    font-weight: 700;
+    @include rem(font-size, 36px);
+    @include rem(line-height, 54px);
+    @include rem(margin-bottom, 25px);
+
+    @include media("max", "sm") {
+        font-size: 36px;
+        line-height: 54px;
+        margin-bottom: 26px;
+    }
+}
+
+.not-found {
+
+    @include media("max", "sm") {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.pulse {
+    animation: pulse 1.5s ease-in-out .5s infinite
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .4
+    }
+
+    100% {
+        opacity: 1
+    }
+}
