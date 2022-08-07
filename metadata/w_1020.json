@@ -1,0 +1,362 @@
+{
+    "i": "svs_v",
+    "lbl": "Накладная (внутренняя)",
+    "modal": "n",
+    "rows": [
+        {
+            "i": "",
+            "vis": "",
+            "fold": "",
+            "lbl": "",
+            "modal": "n",
+            "gs": []
+        },
+        {
+            "i": "a",
+            "vis": "y",
+            "fold": "y",
+            "lbl": "Фильтр",
+            "modal": "n",
+            "gs": [
+                {
+                    "i": "a",
+                    "lbl": "",
+                    "col": "10",
+                    "flex": "y",
+                    "typ": "s",
+                    "ci": "",
+                    "ro": "n",
+                    "items": [
+                        {
+                            "i": "a",
+                            "lbl": "Дата",
+                            "tag": "input",
+                            "typ": "date",
+                            "vis": "y",
+                            "req": "y",
+                            "ro": "n",
+                            "par": "",
+                            "evt": "",
+                            "prop": "",
+                            "len": "",
+                            "min": "",
+                            "fld": "doc_date"
+                        },
+                        {
+                            "i": "b",
+                            "lbl": "Сумма",
+                            "tag": "input",
+                            "typ": "number",
+                            "vis": "y",
+                            "req": "n",
+                            "ro": "n",
+                            "par": "",
+                            "evt": "",
+                            "prop": "",
+                            "len": 12,
+                            "min": 1,
+                            "fld": "doc_sum"
+                        },
+                        {
+                            "i": "c",
+                            "lbl": "Наименование поставщика",
+                            "tag": "select",
+                            "typ": "",
+                            "vis": "y",
+                            "req": "n",
+                            "ro": "n",
+                            "par": "",
+                            "evt": "get-list",
+                            "prop": "select",
+                            "len": "",
+                            "min": "",
+                            "fld": ["doc_org_i", "doc_own_i"]
+                        }
+                    ],
+                    "actions": []
+                },
+                {
+                    "i": "b",
+                    "lbl": "",
+                    "col": "1",
+                    "flex": "n",
+                    "typ": "s",
+                    "ci": "",
+                    "ro": "n",
+                    "items": [
+                        {
+                            "i": "e",
+                            "lbl": "Поиск",
+                            "tag": "button",
+                            "typ": "",
+                            "role": "control",
+                            "vis": "y",
+                            "req": "n",
+                            "ro": "y",
+                            "par": "",
+                            "evt": "search-items",
+                            "prop": "success",
+                            "len": "",
+                            "min": "",
+                            "fld": ""
+                        }
+                    ],
+                    "actions": []
+                },
+                {
+                    "i": "b",
+                    "lbl": "",
+                    "col": "1",
+                    "flex": "n",
+                    "typ": "s",
+                    "ci": "",
+                    "ro": "n",
+                    "items": [
+                        {
+                            "i": "e",
+                            "lbl": "Сбросить",
+                            "tag": "button",
+                            "typ": "",
+                            "role": "control",
+                            "vis": "y",
+                            "req": "n",
+                            "ro": "y",
+                            "par": "",
+                            "evt": "update-table-row",
+                            "prop": "danger",
+                            "len": "",
+                            "min": "",
+                            "fld": ""
+                        }
+                    ],
+                    "actions": []
+                }
+            ]
+        },
+        {
+            "i": "a",
+            "vis": "y",
+            "fold": "n",
+            "lbl": "",
+            "modal": "n",
+            "gs": [
+                {
+                    "i": "a",
+                    "lbl": "",
+                    "col": "12",
+                    "flex": "n",
+                    "typ": "t",
+                    "ci": "6",
+                    "ro": "n",
+                    "items": [
+                        {
+                            "i": "a",
+                            "lbl": "№",
+                            "tag": "input",
+                            "typ": "text",
+                            "vis": "y",
+                            "req": "y",
+                            "ro": "n",
+                            "par": "",
+                            "evt": "",
+                            "prop": "",
+                            "len": "",
+                            "min": "",
+                            "fld": "journal_n"
+                        },
+                        {
+                            "i": "b",
+                            "lbl": "ID",
+                            "tag": "input",
+                            "typ": "text",
+                            "vis": "y",
+                            "req": "n",
+                            "ro": "y",
+                            "par": "",
+                            "evt": "",
+                            "prop": "",
+                            "len": "",
+                            "min": "",
+                            "fld": ""
+                        },
+                        {
+                            "i": "b",
+                            "lbl": "Дата",
+                            "tag": "input",
+                            "typ": "date",
+                            "vis": "y",
+                            "req": "y",
+                            "ro": "n",
+                            "par": "",
+                            "evt": "",
+                            "prop": "",
+                            "len": "",
+                            "min": "",
+                            "fld": "doc_date"
+                        },
+                        {
+                            "i": "b",
+                            "lbl": "Время",
+                            "tag": "input",
+                            "typ": "time",
+                            "vis": "y",
+                            "req": "y",
+                            "ro": "n",
+                            "par": "",
+                            "evt": "",
+                            "prop": "",
+                            "len": "",
+                            "min": "",
+                            "fld": "doc_ts"
+                        },
+                        {
+                            "i": "c",
+                            "lbl": "Сумма",
+                            "tag": "input",
+                            "typ": "number",
+                            "vis": "y",
+                            "req": "y",
+                            "ro": "n",
+                            "par": "",
+                            "evt": "",
+                            "prop": "",
+                            "len": 12,
+                            "min": 1,
+                            "fld": "doc_sum"
+                        },
+                        {
+                            "i": "d",
+                            "lbl": "Наименование поставщика",
+                            "tag": "select",
+                            "typ": "",
+                            "vis": "y",
+                            "req": "n",
+                            "ro": "n",
+                            "par": "",
+                            "evt": "get-list",
+                            "prop": "select",
+                            "len": "",
+                            "min": "",
+                            "fld": "doc_org_i",
+                            "children": 1
+                        },
+                        {
+                            "i": "d2",
+                            "lbl": "БИН",
+                            "tag": "input",
+                            "typ": "text",
+                            "vis": "y",
+                            "req": "n",
+                            "ro": "y",
+                            "par": "",
+                            "evt": "",
+                            "prop": "",
+                            "len": "",
+                            "min": "",
+                            "fld": ""
+                        },
+                        {
+                            "i": "d",
+                            "lbl": "Менеджер",
+                            "tag": "select",
+                            "typ": "",
+                            "vis": "y",
+                            "req": "n",
+                            "ro": "y",
+                            "par": "",
+                            "evt": "get-list",
+                            "prop": "select",
+                            "len": "",
+                            "min": "",
+                            "fld": ""
+                        },
+                        {
+                            "i": "f",
+                            "lbl": "Автор",
+                            "tag": "input",
+                            "typ": "text",
+                            "vis": "y",
+                            "req": "n",
+                            "ro": "y",
+                            "par": "",
+                            "evt": "",
+                            "prop": "",
+                            "len": "",
+                            "min": "",
+                            "fld": "doc_own_i"
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "i": "t1",
+                            "tag": "button",
+                            "lbl": "Добавить",
+                            "typ": "",
+                            "role": "",
+                            "vis": "y",
+                            "req": "n",
+                            "ro": "n",
+                            "evt": "add-table-row",
+                            "prop": "success",
+                            "title": "Введите данные накладной"
+                        },
+                        {
+                            "i": "t1",
+                            "tag": "button",
+                            "lbl": "Обновить",
+                            "typ": "",
+                            "role": "",
+                            "vis": "y",
+                            "req": "n",
+                            "ro": "n",
+                            "evt": "update-table-row",
+                            "prop": "",
+                            "title": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "evt": "form-actions",
+            "dis": "n",
+            "vis": "y",
+            "lbl": "Действия",
+            "alt": "Действия",
+            "icon": "action1",
+            "id": "option-actions",
+            "list": [
+                {
+                    "evt": "form-hide",
+                    "dis": "n",
+                    "vis": "y",
+                    "typ": "button",
+                    "prop": "",
+                    "lbl": "Свернуть",
+                    "alt": "Свернуть текущую форму"
+                },
+                {
+                    "evt": "form-close",
+                    "dis": "n",
+                    "vis": "y",
+                    "typ": "button",
+                    "prop": "danger",
+                    "lbl": "Закрыть",
+                    "alt": "Закрыть текущую форму"
+                }
+            ]
+        },
+        {
+            "evt": "form-print",
+            "dis": "n",
+            "vis": "y",
+            "lbl": "Печать",
+            "alt": "Печать",
+            "icon": "print2",
+            "id": "",
+            "list": []
+        }
+    ]
+}
