@@ -1,0 +1,150 @@
+/* video list */ 
+.modal{
+    display: none;
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: fadeInUp .3s ease-in-out forwards;
+    z-index: 9999995;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    // bottom: 0;
+    // right: 0;
+    // margin: auto;
+    // display: none;
+    // display: block;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.modal-box{
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // bottom: 0;
+    // right: 0;
+    // margin: auto;
+    // // display: none;
+    // // display: block;
+
+    // // margin: 100px 0;
+    // margin-top: 20%;
+    margin: auto;
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    max-width: 700px;
+    // height: max-content;
+    box-shadow: 1px 1px 15px #afafaf;
+    padding: 34px 32px 32px;
+	border-radius: 10px;
+
+    // transform: translateY(-100%);
+    // animation: fadeInUp .3s ease-in-out forwards;
+    // z-index: 9999995;
+
+    &__header{
+        @include d-flex-center-sb;
+
+        margin-bottom: 32px;
+    }
+
+    &__title{
+        font-size: 22px;
+        line-height: 30px;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+
+    &__close{
+		position: absolute;
+		right: 20px;
+		top: 15px;
+		cursor: pointer;
+
+		img{
+			display: block;
+			width: 100%;
+			transition: all .5s;
+
+			&:hover{
+				opacity: .65;
+			}
+		}
+    }
+
+    &.is-active{
+        display: block;
+    }
+}
+
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+	// background: rgba(102, 96, 96, 0.2);
+    // -webkit-backdrop-filter: blur(9px);
+    // backdrop-filter: blur(9px);
+    background: rgba(#000, 0.2);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    z-index: 99999;
+    display: none;
+//    display: block;
+    opacity: 0;
+    animation: fadeInUp .3s ease-in-out forwards;
+
+    &--simple{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        display: none;
+        opacity: 0;
+        animation: fadeInUp .3s ease-in-out forwards;
+    }
+
+    &.is-active{
+        display: block;
+    }
+}
+
+.text-mail-text{
+    padding: 0 10px 20px 0;
+    margin: 30px 0 20px;
+    line-height: 26px;
+    border-bottom: 1px solid $grey;
+    max-height: 200px;
+    overflow-y: auto;
+
+    @include scroll;
+}
+
+.text-sender-name{
+    margin: 0 7px;
+}
+
+.text-mail-date{
+    color: $grey;
+    font-size: 12px;
+}
+
+.text-mail-reply-body{
+    padding: 0 10px 20px 10px;
+    margin: 0 0 20px;
+    line-height: 26px;
+    border-left: 1px solid #9e9e9e;
+    color: #afafaf;
+}
